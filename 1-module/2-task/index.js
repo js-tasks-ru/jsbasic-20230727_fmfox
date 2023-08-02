@@ -16,3 +16,5 @@ function sayHello() {
     print('Имя не соответствует условиям');
   }
 }
+
+sayHello();
