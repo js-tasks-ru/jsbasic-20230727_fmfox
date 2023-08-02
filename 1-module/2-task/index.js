@@ -3,8 +3,9 @@ function print(text) {
 }
 
 function isValid(name) {
-  if(typeof(name) == 'string' && /^\S*$/.test(name) && name.length > 3) return 1;
-  else return 0;
+  if(typeof(name) === 'string' && /^\S*$/.test(name) && name.length > 3 && name != null && name != undefined) {
+    return 1;
+  } else return 0;
 }
 
 function sayHello() {
