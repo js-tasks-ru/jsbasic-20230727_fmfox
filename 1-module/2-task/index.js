@@ -3,18 +3,16 @@ function print(text) {
 }
 
 function isValid(name) {
-  if(name && typeof(name) === 'string' && name !== '' && /^\s*$/.test(name) && name.length > 3) {
-    return 1;
-  } else return 0;
+  return (name && typeof(name) === 'string' && name !== '' && /^\S*$/.test(name) && name.length > 3)
 }
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
-    print(`Добро пожаловать, ${userName}!`);
+    print(`Welcome back, ${userName}!`);
   } else {
-    print('Имя не соответствует условиям');
+    print('Некорректное имя');
   }
 }
 
