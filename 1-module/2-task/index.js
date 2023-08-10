@@ -1,16 +1,9 @@
-/**
- * Эту функцию трогать не нужно
- */
 function print(text) {
   console.log(text);
 }
 
-/**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- */
 function isValid(name) {
-  // ваш код...
+  return (typeof(name) === 'string' && name !== '' && /^\S*$/.test(name) && name.length > 3)
 }
 
 function sayHello() {
@@ -22,3 +15,5 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
+sayHello();
