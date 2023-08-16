@@ -6,10 +6,14 @@ let calculator = {
     else throw new Error ('Переменные должны быть конечными ЧИСЛАМИ!');
   },
   sum() {
-    return calculator.a + calculator.b;
+    if(calculator.a === undefined || calculator.b === undefined) {
+      throw new Error ('Сперва нужно передать в функцию 2 числа: read(x, y)');
+    } else return calculator.a + calculator.b;
   },
   mul() {
-    return calculator.a * calculator.b;
+    if(calculator.a === undefined || calculator.b === undefined) {
+      throw new Error ('Сперва нужно передать в функцию 2 числа: read(x, y)');
+    } else return calculator.a * calculator.b;
   }
 };
 
