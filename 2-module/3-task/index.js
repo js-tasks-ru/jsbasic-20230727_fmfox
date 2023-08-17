@@ -1,19 +1,17 @@
 let calculator = {
   read(a, b) {
-    if(typeof(a)==='number' && !isNaN(a) && isFinite(a)) calculator.a = a;
-    else return console.log('Переменные должны быть конечными числами!');
-    if(typeof(b)==='number' && !isNaN(b) && isFinite(b)) calculator.b = b;
-    else return console.log('Переменные должны быть конечными числами!');
-    console.log(calculator.a, calculator.b);
-    console.log(typeof(calculator.a));
-    console.log(typeof(calculator.b));
-    console.log(Number(calculator.a) && Number(calculator.b));
+    if( typeof(a)==='number' && !isNaN(a) && isFinite(a) ) calculator.a = a;
+    else throw new Error ('Переменные должны быть конечными ЧИСЛАМИ!');
+    if( typeof(b)==='number' && !isNaN(b) && isFinite(b) ) calculator.b = b;
+    else throw new Error ('Переменные должны быть конечными ЧИСЛАМИ!');
   },
   sum() {
-    return calculator.a + calculator.b;
+    if('a' in calculator && 'b' in calculator) return calculator.a + calculator.b;
+    throw new Error ('Сперва нужно передать в функцию 2 числа: read(x, y)');
   },
   mul() {
-    return calculator.a * calculator.b;
+    if('a' in calculator && 'b' in calculator) return calculator.a * calculator.b;
+    throw new Error ('Сперва нужно передать в функцию 2 числа: read(x, y)');
   }
 };
 
