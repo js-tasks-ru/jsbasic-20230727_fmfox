@@ -13,7 +13,7 @@ function camelize(str) {
       }
     }
     return strCamel.replaceAll('-', '');
-  } else new Error('На вход принимаются только строки!');
+  } else throw new Error('На вход принимаются только строки!');
 }
 
 // function camelize(str) {
