@@ -2,7 +2,7 @@ function camelize(str) {
   if(typeof(str) === 'string') {
     let strCamel = '';
     let defis = false; // «лакмусовая бумажка», что прошлым символом был дефис
-    for (let i = 0 ; i <= str.length - 1; i++) {
+    for (let i = 0 ; i < str.length; i++) {
       if(str[i] === '-') defis = true;
       else {
         if(defis === true) {
