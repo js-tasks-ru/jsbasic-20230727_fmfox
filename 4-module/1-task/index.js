@@ -9,13 +9,12 @@ function makeFriendsList(obj) {
     else throw new Error('в объекте нет ни firstName, ни lastName');
     j++;
   });
-  
-  let res = document.createElement('ul');
-	for(let i = 0; i < tmp.length; i++) {
-      let li = document.createElement('li');	// МОЖНО ЛИ
-      li.innerText = `${tmp[i]}`;		// БЫЛО КАК-ТО
-      res.append(li);				// ЭТО ПРОЩЕ СДЕЛАТЬ ?  в одну строку может...
-    }
-  console.log(res);
+
+let res = document.createElement('ul');
+  for(let i = 0; i < tmp.length; i++) {
+    let li = document.createElement('li');	// МОЖНО ЛИ
+    li.innerText = `${tmp[i]}`;			// БЫЛО КАК-ТО
+    res.append(li);				// ЭТО ПРОЩЕ СДЕЛАТЬ ?  в одну строку может...
+  }
   return res;
 }
