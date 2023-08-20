@@ -10,11 +10,13 @@ function makeFriendsList(obj) {
     j++;
   });
 
-  let res = document.createElement('ul');
-	for(let i = 0; i < tmp.length; i++) {
-      let li = document.createElement('li');	// МОЖНО ЛИ
-      li.innerText = `${tmp[i]}`;				// БЫЛО КАК-ТО
-      res.append(li);							// ЭТО ПРОЩЕ СДЕЛАТЬ ?  в одну строку может...
+  let ul = document.createElement('ul');
+    for(let i = 0; i < tmp.length; i++) {
+      let li = document.createElement('li');
+      let liText = document.createTextNode(tmp[i]);	// МОЖНО ЛИ
+      //li.innerText = `${tmp[i]}`;
+      li.appendChild(liText);				// БЫЛО КАК-ТО
+      ul.appendChild(li);				// ЭТО ПРОЩЕ СДЕЛАТЬ ?  в одну строку может...
     }
-  return res;
+  return ul;
 }
