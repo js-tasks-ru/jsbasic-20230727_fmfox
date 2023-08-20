@@ -1,7 +1,7 @@
 function makeFriendsList(obj) {
   let tmp = [];
   let j = 0;
-  friends.forEach( (i) => {
+  obj.forEach( (i) => {
     if('firstName' in i) {
       tmp[j] = i.firstName;
       if('lastName' in i) tmp[j] += ' ' + i.lastName;
